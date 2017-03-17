@@ -1,0 +1,24 @@
+import bge
+
+def girar():
+    
+    #bge.types.SCA_PythonController
+    cont = bge.logic.getCurrentController()
+
+    #bge.types.KX_GameObject
+    obj = cont.owner
+    rotation = [ 0.0, 0.0, 0.1]
+    obj.applyRotation(rotation, False)
+    
+    act = obj.actuators["Action"]
+    act.frameStart = 0
+    act.frameEnd = 30
+    
+    act.activate(act)
+    print (act.frameEnd)
+
+
+keyboard = bge.logic.keyboard
+JUST_ACTIVATED = bge.logic.KX_INPUT_JUST_ACTIVATED
+if keyboard.events[bge.events.SPACEKEY] == JUST_ACTIVATED:
+    girar()
