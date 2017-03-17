@@ -1,4 +1,7 @@
 import bge
+import Rasterizer
+
+Rasterizer.showMouse(True)
 
 def girar():
     
@@ -7,8 +10,8 @@ def girar():
 
     #bge.types.KX_GameObject
     obj = cont.owner
-    rotation = [ 0.0, 0.0, 0.1]
-    obj.applyRotation(rotation, False)
+    #rotation = [ 0.0, 0.0, 0.1]
+    #obj.applyRotation(rotation, False)
     
     act = obj.actuators["Action"]
     act.frameStart = 0
