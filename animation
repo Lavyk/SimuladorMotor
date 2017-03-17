@@ -14,7 +14,7 @@ def girar():
     act.frameStart = 0
     act.frameEnd = 30
     
-    act.activate(act)
+    cont.activate(act)
     print (act.frameEnd)
 
 
